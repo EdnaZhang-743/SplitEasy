@@ -43,7 +43,7 @@ npm run build
   to the settlement logic via `useMemo`.
 
 The project uses TypeScript throughout (`strict` mode on), so `npm run build` runs a
-full type check (`tsc -b`) before bundling — a type error fails the build, not just
+full type check (`tsc -b`) before bundling, a type error fails the build, not just
 a lint warning.
 
 ### Settlement approach
@@ -75,21 +75,21 @@ the React components, and later migrate the whole codebase to TypeScript, with m
 steering the architecture decisions (separating logic from UI, using integer cents,
 the greedy matching approach, where shared types should live) and reviewing/running
 the output at each step rather than accepting it blindly. I used Vite to scaffold the
-project, TypeScript in strict mode for type safety, and Vitest for testing — all
+project, TypeScript in strict mode for type safety, and Vitest for testing. All
 standard tooling rather than anything AI-specific.
 
 **3. What assumptions did you make, given the brief was vague?**
 - Expenses are split evenly by default, but a user can deselect specific people from
-  an expense (e.g., one person didn't have the dessert) — the brief only required
+  an expense (e.g., one person didn't have the dessert). The brief only required
   "shared across the group" as a minimum, so I treated full-group sharing as the
   default with per-expense overrides as the natural next step.
 - State persists to localStorage so a session survives a page refresh, since losing
   the whole group on an accidental reload felt like it would undermine trust in the
   tool more than the added complexity was worth.
-- No currency conversion or multi-currency support — assumed a single shared currency
+- No currency conversion or multi-currency support. Assumed a single shared currency
   per group, which covers the stated trip/dinner use case.
 - People can't be removed once they're referenced by an existing expense (as payer or
-  participant) — removal is blocked with an explanation rather than allowed to either
+  participant). Removal is blocked with an explanation rather than allowed to either
   rewrite history or leave dangling references, since silently wrong balances would
   undermine the "heart of the task."
 
