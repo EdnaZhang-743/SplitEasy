@@ -58,7 +58,7 @@ largest-debtor-to-largest-creditor matching. It doesn't guarantee the mathematic
 absolute minimum number of transactions in every possible edge case, but it produces
 a small, sensible set of payments in practice and is straightforward to follow.
 
-## Written answers
+## Q & A
 
 **1. What was your workflow?**
 I started by separating the problem into two halves: the settlement math (correctness-
@@ -75,7 +75,7 @@ the React components, and later migrate the whole codebase to TypeScript, with m
 steering the architecture decisions (separating logic from UI, using integer cents,
 the greedy matching approach, where shared types should live) and reviewing/running
 the output at each step rather than accepting it blindly. I used Vite to scaffold the
-project, TypeScript in strict mode for type safety, and Vitest for testing — all
+project, TypeScript in strict mode for type safety, and Vitest for testing, all
 standard tooling rather than anything AI-specific.
 
 **3. What assumptions did you make, given the brief was vague?**
