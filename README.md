@@ -43,7 +43,7 @@ npm run build
   to the settlement logic via `useMemo`.
 
 The project uses TypeScript throughout (`strict` mode on), so `npm run build` runs a
-full type check (`tsc -b`) before bundling — a type error fails the build, not just
+full type check (`tsc -b`) before bundling, a type error fails the build, not just
 a lint warning.
 
 ### Settlement approach
