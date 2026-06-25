@@ -80,13 +80,13 @@ standard tooling rather than anything AI-specific.
 
 **3. What assumptions did you make, given the brief was vague?**
 - Expenses are split evenly by default, but a user can deselect specific people from
-  an expense (e.g., one person didn't have the dessert) — the brief only required
+  an expense (e.g., one person didn't have the dessert). The brief only required
   "shared across the group" as a minimum, so I treated full-group sharing as the
   default with per-expense overrides as the natural next step.
-- No persistence (localStorage/backend) — the brief only asked for a working frontend
+- No persistence (localStorage/backend). The brief only asked for a working frontend
   demo, and adding storage felt like scope beyond the 4-hour budget without being asked.
   State resets on reload; this is the first thing I'd add given more time.
-- No currency conversion or multi-currency support — assumed a single shared currency
+- No currency conversion or multi-currency support. Assumed a single shared currency
   per group, which covers the stated trip/dinner use case.
 - Removing a person also removes their involvement from expenses, rather than leaving
   dangling references, since silently wrong balances would undermine the "heart of the
