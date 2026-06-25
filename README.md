@@ -58,7 +58,7 @@ largest-debtor-to-largest-creditor matching. It doesn't guarantee the mathematic
 absolute minimum number of transactions in every possible edge case, but it produces
 a small, sensible set of payments in practice and is straightforward to follow.
 
-## Written answers
+## Q & A
 
 **1. What was your workflow?**
 I started by separating the problem into two halves: the settlement math (correctness-
